@@ -1,0 +1,19 @@
+Teste Fast Shop
+
+Nome: Eduardo dos Santos
+
+Simplificação de layout e funcionalidade
+
+Vocês vão perceber que simplifiquei o layout(principalmente da tela de detalhe) e algumas funcionalidades para que fosse possível entregar no prazo.
+
+Tecnologias
+
+Utilizei o angular-cli para fazer a base do projeto, escolhi o sass como processador css já que o webpack que vem com o angular-cli já o suporta,
+estou utilizando o bootstrap para desenvolver o layout responsivo.
+
+Instalação
+
+npm install  
+ng serve
+//acessar pelo site http://localhost:4200
+
