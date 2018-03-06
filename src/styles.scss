@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$color_lightGray: #f4f4f4;
+
+body { 
+    background-color: $color_lightGray;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+  }
+

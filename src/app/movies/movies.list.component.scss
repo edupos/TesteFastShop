@@ -1,0 +1,107 @@
+$color_lightGray: #f4f4f4;
+$color_gray: #e2dfdf;
+$color_darkGray: #b9b9b9;
+$color_white: #ffffff;
+$color_black: #000000;
+
+h2 {
+    font-size: 1.5em;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+  }
+
+h5 a, h5 a:hover, h5 a:visited, h5 a:active{
+    color: $color_black;
+    width: 100%;
+    display: block;
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 1.1em;
+    text-decoration: none;
+}
+
+li {
+    float: left;
+    padding-right: 40px;
+    padding-top: 40px;
+    list-style-type: none;
+  }
+
+.card-img-mob
+{
+    @media (max-width: 991px) {
+        width:185px;
+        position:relative;
+        left:50%;
+        margin-left:-92px;
+    }
+}
+
+.card-horizontal {
+    @media (min-width: 992px) {
+        /* CSS goes here */    
+        flex-direction: row;
+        top: -1px;
+    }
+    @media (max-width: 991px) {
+        flex-direction: column;
+        height: 550px;
+    }
+}
+
+.info-date {
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: $color_darkGray;
+}
+
+.card-footer {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: $color_gray;
+    background-color: $color_white;
+    display: inline; 
+    vertical-align: bottom;
+    @media (min-width: 992px) {
+        position:absolute;
+        bottom:0;
+        width: 60.5%;
+        margin-left: -20px;
+    }
+    @media (max-width: 991px) {
+        position:absolute;
+        bottom:0;
+        width: 100%;
+        margin-left: -20px;
+    }
+}
+
+.card-footer a, .card-footer a:hover, .card-footer a:visited, .card-footer a:active {
+    color: $color_black;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+.discover {
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+
+.paging{
+    text-align: right;
+    width:200px;
+    float:left;
+
+}
+
+.paging a, .paging a:hover, .paging a:visited, .paging a:active
+{
+    color: $color_black;
+    /*text-decoration: none;*/
+    font-weight: normal;
+    font-size: 0.8em;
+
+}

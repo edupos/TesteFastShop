@@ -1,0 +1,93 @@
+
+<div class="container">
+               
+  <div style="text-align:left">
+    <h2>
+      Descobrir Novos Filmes
+    </h2>
+  </div>
+      
+  <div class="row discover">
+    <form id="discover">
+
+        <label for="with_genres" id="with_genres_label">Gêneros</label>
+
+        <select [(ngModel)]="with_genre" (change)="update(movies.page)" style="width: 260px;" name="with_genre" >
+          <option value="0">Todos</option>
+          <option value="16">Animação</option>
+          <option value="12">Aventura</option>
+          <option value="28">Ação</option>
+          <option value="10770">Cinema TV</option>
+          <option value="35">Comédia</option>
+          <option value="80">Crime</option>
+          <option value="99">Documentário</option>
+          <option value="18">Drama</option>
+          <option value="10751">Família</option>
+          <option value="14">Fantasia</option>
+          <option value="37">Faroeste</option>
+          <option value="878">Ficção científica</option>
+          <option value="10752">Guerra</option>
+          <option value="36">História</option>
+          <option value="9648">Mistério</option>
+          <option value="10402">Música</option>
+          <option value="10749">Romance</option>
+          <option value="27">Terror</option>
+          <option value="53">Thriller</option>
+        </select>
+
+    </form>
+  </div>
+
+  <div class="row">
+    <ul class="col-md-12">
+      
+      <li *ngFor="let m of movies.results" class="col-md-6 col-sm-12 col-xs-12">
+        <div class="card card-horizontal">
+          <a class="title" href="/movie/{{m.id}}?language=pt" title="{{m.title}}">
+            <img class="img-responsive card-img-mob" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{m.poster_path}}" alt="{{m.title}}">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a class="title" href="/movie/{{m.id}}?language=pt" title="{{m.title}}">
+                {{m.title}}
+              </a>
+            </h5>
+            <div class="info-date">{{m.release_date}}</div>
+            <div class="card-text">
+                {{ (m.overview.length >= 164)? (m.overview | slice:0:164)+'...' : (m.overview) }}
+            </div>
+            <div class="card-footer">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="m.vote_average * 10" aria-valuemin="0" aria-valuemax="100" [style.width.%]="m.vote_average * 10">
+                      {{m.vote_average *10}} %
+                    </div>
+                  </div>
+              <a class="title" href="/movie/{{m.id}}?language=pt" title="{{m.title}}" >
+                Mais informações<br/>
+              </a>
+            </div>          
+          </div>
+        </div>
+      </li>
+  
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-4">Atualmente na página: {{movies.page}} of {{movies.total_pages}}<br/>
+        ({{movies.total_results}} resultados)<br/><br/>
+    </div>
+    <div class="col-md-5"></div>
+    <div class="col-md-1 paging" >
+          <a *ngIf="movies.page > 1"  (click)="update(movies.page - 1)" href="#">
+            anterior          
+          </a>
+    </div>
+    <div class="col-md-1 paging"  >
+          <a *ngIf="movies.page < movies.total_pages" (click)="update(movies.page + 1)" href="#">
+            próxima
+          </a>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+</div>

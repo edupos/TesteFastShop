@@ -1,0 +1,24 @@
+<div class="container col-md-12">
+
+    <div class="row backgroud-detail col-md-12" [style.backgroundImage]="backImg">
+    </div>
+    <div class="row backgroud-detail-green col-md-12"></div>
+    <div class="row backgroud-detail-info col-md-12">
+        <div class="col-md-5 poster">
+                <img class="poster" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movie.poster_path}}" srcset="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movie.poster_path}} 1x, https://image.tmdb.org/t/p/w600_and_h900_bestv2{{movie.poster_path}} 2x" alt="{{movie.title}}">
+        </div>
+        <div class="col-md-7">
+            <div class="title">{{movie.title}}</div>
+            <div class="subtitle">Sinopse</div>
+            <div>{{movie.overview}}</div>
+            <div class="subtitle">Gênero</div>
+            <div>
+                <span *ngFor="let g of movie.genres"> {{g.name}} |</span>
+            </div>
+            <div class="action">
+                <button type="button" (click)="this.goHome()" class="btn btn-success">Voltar</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
