@@ -4,7 +4,8 @@ Nome: Eduardo dos Santos
 
 Simplificação de layout e funcionalidade
 
-Vocês vão perceber que simplifiquei o layout(principalmente da tela de detalhe) e algumas funcionalidades para que fosse possível entregar no prazo.
+Vocês vão perceber que simplifiquei o layout(principalmente da tela de detalhe) e algumas funcionalidades
+para que fosse possível entregar no prazo.
 
 Tecnologias
 
